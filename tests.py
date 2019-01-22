@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from debsec import updates, dsa_url, dsa, DsaDoesNotExit
+from debsec import DsaDoesNotExit, dsa, dsa_url, updates
 
 
 class UpdatesTestCase(TestCase):
@@ -37,13 +37,13 @@ class DsaUrlTestCase(TestCase):
     def test_dsa_url(self):
         res = dsa_url(4078, self.updates)
 
-        url = 'https://lists.debian.org/debian-security-announce/2018/msg00000.html'
+        url = 'https://lists.debian.org/debian-security-announce/2019/msg00000.html'
         self.assertEqual(res, url)
 
     def test_two_digits(self):
         res = dsa_url(4091, self.updates)
 
-        url = 'https://lists.debian.org/debian-security-announce/2018/msg00013.html'
+        url = 'https://lists.debian.org/debian-security-announce/2019/msg00013.html'
         self.assertEqual(res, url)
 
     def test_inexistent(self):

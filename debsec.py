@@ -53,7 +53,7 @@ def dsa_url(dsa_number: DsaNumber, updates: Updates) -> Url:
     else:
         raise DsaDoesNotExit
     id_ = str(i).zfill(5)
-    return ("https://lists.debian.org/debian-security-announce/2018/msg{}.html"
+    return ("https://lists.debian.org/debian-security-announce/2019/msg{}.html"
             .format(id_))
 
 
